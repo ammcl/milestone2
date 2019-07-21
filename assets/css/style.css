@@ -1,0 +1,111 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("../images/tablemountain.JPG")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  .zebra{
+    background: url("../images/zebra.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+
+}
+
+.addo{
+background: url("../images/addo.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 360px;
+transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-webkit-transition: all .5s ease-in-out;
+}
+
+.camdeboo{
+  background: url("../images/valley.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 360px;
+transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-webkit-transition: all .5s ease-in-out;
+
+}
+
+/*Image Gallery*/
+#saphotoscarousel,
+.item,
+.active {
+    height: 75%;
+    width: 100%;
+    text-align: center;
+    padding:0;
+    margin-bottom: 20px;
+}
+
+#saphotoscarousel .carousel-inner {
+  display: block;
+  height: 100vh;
+  max-width: 100%;
+  line-height: 1;
+  margin:auto;
+  width: 100%; 
+  }
+
+.img-responsive {
+    width: 100%;
+}
+
+#container-carousel {
+    padding: 0;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+/*Map*/
+#map {
+  height: 100%;
+  }
+  /* Optional: Makes the sample page fill the window. */
+  html, body {
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  }
