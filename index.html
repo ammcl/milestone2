@@ -32,17 +32,20 @@
             </ul>
         </div>
     </nav>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_e9U53wxuKrxysbKJRXEVq");
+    })();
+    </script>
 </head>
     <!--Mask-->
     <div id="intro" class="view">
         <div class="mask rgba-black-strong">
-
             <div class="container-fluid d-flex align-items-center justify-content-center h-100">
-
                 <div class="row d-flex justify-content-center text-center">
-
                     <div class="col-md-10">
-
                         <!-- Heading -->
                         <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">A Trip of a Life Time</h2>
                         <hr class="hr-light">
@@ -58,7 +61,7 @@
     </div>
     <!--/.Mask-->
     <!--Main Navigation-->
-<main class="mt-5">
+<body class="mt-5">
         <div class="container">
             <!--Section: Suggested Tours-->
             <section id="suggested-tours" class="text-center">
@@ -67,7 +70,6 @@
                 <div class="row d-flex justify-content-center mb-4">
                     <!--Grid column-->
                     <div class="col-md-8">
-
                         <!-- Tour Descriptions -->
                         <p class="grey-text">There are so many different tours to take in and around Cape Town, you have
                             the <a
@@ -85,7 +87,6 @@
                                 early explorers into the wild undiscovered, REAL South Africa. It’s now a journey that
                                 you can experience…<a href="http://theforgottenroute.co.za/">The Forgotten Route</a></p>
                         </div>
-
                         <div class="col-md-4 mb-1">
                             <i class="fas fa-wine-bottle fa-4x orange-text"></i>
                             <h4 class="my-4 font-weight-bold">Wine Country</h4>
@@ -115,10 +116,8 @@
                 <h2 class="mb-5 font-weight-bold">National Parks</h2>
                 <!--Grid row-->
                 <div class="row">
-
                     <!--Grid column-->
                     <div class="col-lg-4 col-md-12 mb-4">
-
                         <div class="zebra view overlay z-depth-1-half img-fluid" alt="">
                             <div class="mask rgba-white-slight"></div>
                         </div>
@@ -129,7 +128,6 @@
 
                     </div>
                     <!--Grid column-->
-
                     <!--Grid column-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="addo view overlay z-depth-1-half img-fluid" alt="">
@@ -141,7 +139,6 @@
                         <p><a href="https://www.sanparks.org/parks/addo/">Addo Elepant National Park</a></p>
                     </div>
                     <!--Grid column-->
-
                     <!--Grid column-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="camdeboo view overlay z-depth-1-half img-fluid" alt="">
@@ -160,9 +157,20 @@
         <section id="roadtrip" class="text-center">
             <h2 class="mb-5 font-weight-bold">Road Trip</h2>
             <div class="container-fluid"> 
-                <div id="map"></div>
-            </div> 
-            
+                    <select id="areaSelect" onchange="moveMap()">
+                            <option value="Addo">Addo National Park</option>
+                            <option value="Mount">Mount Zebra National Park</option>
+                            <option value="Knysna">Knysna National Park</option>
+                          </select>
+                        </div>              
+                <div class="col-lg-7 col-md-12">
+                    <!--Google map-->
+                         <div id="map" class="z-depth-1-half map-container mb-5" style="height: 600px"></div>
+                  </div>  
+                  <div class="container">
+                        <button id="buttonMarker" onclick="updateMarkers();">Show on Map</button>
+                        <button id="buttonClear" onclick="deleteCheckmarks();">Clear Checks</button>
+                    </div>
         </section>
 
         <!--Section: Gallery-->
@@ -170,7 +178,6 @@
          <h2 class="mb-5 font-weight-bold">Photo Gallery</h2>
            <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
                             <div id="saphotoscarousel" class="carousel slide" data-ride="carousel">
                                 <!--indicators dot nav-->
                                 <ol class="carousel-indicators">
@@ -230,7 +237,6 @@
                                         <span class="sr-only">Next</span>
                                 </a>
                             </div>
-                    </div>
                 </div>
             </div>        
                 <!--Section: Contact-->
@@ -256,39 +262,28 @@
     <section id="contact">
 
         <!-- Heading -->
-        <h2 class="mb-5 font-weight-bold text-center">Contact Me for Further Information</h2>
+        <h2 class="mb-5 font-weight-bold text-center">Got a Question?</h2>
+        <h5 class="contact-heading text-center">We will do our best to reply!</h5>
 
         <!--Grid row-->
-        <div class="row">
-            <!--Grid column-->
             <div class="col-lg-5 col-md-12">
                 <!-- Form contact -->
-                <form class="p-5 grey-text">
-                    <div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
-                        <input type="text" id="form3" class="form-control form-control-sm">
-                        <label for="form3">Your name</label>
+                    <div class="row bg-color-contact">
+                                <div class="center-form">
+                                    <form id="myform">
+                                        <input type="text" name="name" id="from_name" class="form-control" placeholder="Name" required />
+                                        <input type="email" name="email" id="from_email" class="form-control" placeholder="Email" required />
+                                        <textarea rows="5" name="query" id="holiday_info" class="form-control" placeholder="Query" required></textarea>
+                                        <div class="form-row text-center">
+                                            <div class="col">
+                                                <button type="submit" class="btn btn-secondary">Send Request</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                     </div>
-                    <div class="md-form form-sm"> <i class="fa fa-envelope prefix"></i>
-                        <input type="text" id="form2" class="form-control form-control-sm">
-                        <label for="form2">Your email</label>
-                    </div>
-                    <div class="md-form form-sm"> <i class="fa fa-tag prefix"></i>
-                        <input type="text" id="form32" class="form-control form-control-sm">
-                        <label for="form34">Subject</label>
-                    </div>
-                    <div class="md-form form-sm"> <i class="fa fa-pencil prefix"></i>
-                        <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
-                        <label for="form8">Your message</label>
-                    </div>
-                    <div class="text-center mt-4">
-                        <button class="btn btn-primary">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
-                    </div>
-                </form>
                 <!-- Form Contact End-->
-            </div>
-        </div>    
-        <!--Grid column-->
-
         <!--Grid column-->
         <div class="col-lg-7 col-md-12"></div>
     </section>
@@ -297,8 +292,43 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key&callback=initMap" type="text/javascript"></script>
-        <!--Java Scripts End-->
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDDcbzrJNsInwmf15jcDJjRdkMTLXqtD3E&callback=initMap"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="assets/js/sendEmail.js"></script>
+   <!--Java Scripts End-->
+    <footer>
+        <div class="container">
+            <button class="btn btn-default btn-lg pull-xs-right"></button>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <script>
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() { scrollFunction() };
 
-</main>
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("myBtn").style.display = "block";
+                    }
+                    else {
+                        document.getElementById("myBtn").style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+            <div class="footer-copyright text-center py-3">
+                </h5>Designed by Ann Marie McLaughlin, All Photography copyright remains with the designer.</h5>
+            </div>
+        </div>
+ 
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2019 Copyright: Ann Marie McLaughlin</div>
+            <!-- Copyright -->
+    
+        </footer>
+        <!-- Footer -->
+</body>
 </html>
