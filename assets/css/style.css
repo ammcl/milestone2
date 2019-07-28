@@ -96,7 +96,7 @@ transition: all .5s ease-in-out;
 }
 
 /*Map*/
-div#map {min-height: 360px;}
+#map {min-height: 360px;}
 
 
 /*Contact Form */
