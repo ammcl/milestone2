@@ -23,9 +23,9 @@
                             class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#nationalparks"><span>National Parks</span><span
                             class="sr-only">(current)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#roadtrip"><span>Map of Road Trip</span><span
+                <li class="nav-item"><a class="nav-link" href="#roadtrip"><span>Maps</span><span
                             class="sr-only">(current)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#gallery"><span>Gallery</span><span
+                <li class="nav-item"><a class="nav-link" href="#gallery"><span>Photo Gallery</span><span
                             class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact"><span>Contact</span><span
                             class="sr-only">(current)</span></a></li>
@@ -155,14 +155,32 @@
             </section>       
         <!--Section: Road Trip Map-->
         <section id="roadtrip" class="text-center">
-            <h2 class="mb-5 font-weight-bold">Road Trip</h2>
-
+            <h2 class="mb-5 font-weight-bold">Maps of South Africa</h2>
+                <div class="container-fluid"> 
+                 <select id="areaSelect" onchange="moveMap()">
+                        <option value="">Please Pick From The List below</option>
+                        <option value="sa">Map of South Africa</option>
+                        <option value="table">Table Mountain, Cape Town</option>
+                        <option value="camdeboo">Camdeboo National Park Valley of Desolation</option>
+                        <option value="mount">Mount Zebra National Park</option>
+                        <option value="spek">Addo National Park - Spekboom</option>
+                        <option value="nyathi">Addo National Park - Nyathi</option>
+                        <option value="storms">Garden Route - Storms River</option>
+                        <option value="valley">Garden Route - Nature Valley</option>
+                        <option value="diep">Garden Route - Diepwalle</option>
+                        <option value="ebb">Garden Route - Ebb & Flow</option>
+                        <option value="laghlas">L'Agulhas National Park</option>
+                 </select>
+               </div>  
               <!--Google map-->
                          <div id="map"></div>
         </section>
 
         <!--Section: Gallery-->
         <section id="gallery" class="text-center">
+            <p>
+                
+            </p>
          <h2 class="mb-5 font-weight-bold">Photo Gallery</h2>
            <div class="container">
                 <div class="row">
@@ -280,7 +298,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDcbzrJNsInwmf15jcDJjRdkMTLXqtD3E&callback=initMap"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDcbzrJNsInwmf15jcDJjRdkMTLXqtD3E&libraries=places&callback=initMap"></script>
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script src="assets/js/map.js"></script>
         <script src="assets/js/sendEmail.js"></script>
