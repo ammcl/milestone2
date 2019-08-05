@@ -43,12 +43,6 @@ function initMap() {
     
     function moveMap() {
        switch (document.getElementById("areaSelect").value) {
-        case 'sa':
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -33.929, lng: 18.417400000000043}, //South Africa//
-                zoom: 4
-            });
-            break;
           case 'table':
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: -33.9616, lng: 18.4100}, //Table Mountain Cape Town//

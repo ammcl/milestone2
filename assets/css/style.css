@@ -13,6 +13,8 @@ header,
     background-size: cover;
 }
 
+/*Navigation Bar Settings */
+
 .top-nav-collapse {
     background-color: #24355C;
   }
@@ -26,6 +28,32 @@ header,
       background-color: #24355C;
     }
   }
+  
+
+.navbar {
+    margin-bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .25);
+    border: 0;
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+}
+
+.navbar .navbar-nav a {
+    font-weight: bold;
+}
+
+.navbar .nav-item {
+    color: #000 !important;
+}
+  
+/* Images holders for touring sites */
 .zebra{
     background: url("../images/zebra.jpg");
     background-position: center;
@@ -37,7 +65,6 @@ header,
     -webkit-transition: all .5s ease-in-out;
 
 }
-
 .addo{
 background: url("../images/addo.jpg");
 background-position: center;
@@ -61,7 +88,7 @@ transition: all .5s ease-in-out;
 
 }
 
-/*Image Gallery*/
+/*Image Carousel Gallery*/
 #saphotoscarousel,
 .item,
 .active {
@@ -95,7 +122,7 @@ transition: all .5s ease-in-out;
   border: 1px solid black;
 }
 
-/*Map*/
+/*South African Map*/
 #map {
   padding-top: 10px;
   min-height: 500px;
@@ -121,7 +148,6 @@ form {
   padding: 20px 25px;
   margin: auto;
   margin-top: 30px;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
 }
 form input,
 form textarea {
