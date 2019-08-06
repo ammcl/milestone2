@@ -54,6 +54,7 @@ function initMap() {
                     center: {lat: -32.2667, lng: 24.4929}, //Camdeboo National Park Valley of Desolation//
                    zoom: 10
                });
+               
                break;
           case 'mount':
                map = new google.maps.Map(document.getElementById('map'), {
