@@ -42,11 +42,11 @@ header,
 }
 
 .navbar .navbar-brand {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .navbar .navbar-nav a {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .navbar .nav-item {
@@ -60,11 +60,14 @@ header,
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 360px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
-
 }
+
 .addo{
 background: url("../images/addo.jpg");
 background-position: center;
@@ -115,11 +118,11 @@ transition: all .5s ease-in-out;
 .carousel-control-prev-icon, .carousel-control-next-icon {
   height: 50px;
   width: 50px;
-  outline: black;
+  outline: #000;
   background-color: rgba(0, 0, 0, 0.3);
-  background-size: 50%, 50%;
+  background-size: 50%;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px #000;
 }
 
 /*South African Map*/
@@ -144,7 +147,7 @@ body {
 }
 form {
   width: 500px;
-  background: white;
+  background: #fff;
   padding: 20px 25px;
   margin: auto;
   margin-top: 30px;
@@ -152,7 +155,7 @@ form {
 form input,
 form textarea {
   font: inherit;
-  padding: 5px 5px;
+  padding: 5px;
   width: 100%;
   margin-top: 3px;
   margin-bottom: 15px;
@@ -177,7 +180,7 @@ form label {
 #footer-details {
   padding: 50px;
   position: center;
-  text-emphasis: bold;
+  color: #000;
   text-align: center;
 }
 
@@ -197,7 +200,7 @@ html {
   border: none;
   outline: none;
   background-color: #ffa500;
-  color: white;
+  color: #fff;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;

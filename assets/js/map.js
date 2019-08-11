@@ -29,13 +29,9 @@ function initMap() {
        {lat: -33.9616, lng: 18.4100}, //Table Mountain Capetown//
        {lat: -32.2667, lng: 24.4929}, //Camdeboo National Park Valley of Desolation//
        {lat: -32.2195, lng: 25.4798}, //Mount Zebra National Park//
-       {lat: -33.2440, lng: 25.2975}, //Addo National Park - Spekboom//
-       {lat: -33.3845, lng: 25.7937}, //Addo National Park - Nyathi//
-       {lat: -34.0222, lng: 23.8962}, //Garden Route - Storms River//
-       {lat: -33.9695, lng: 23.5621}, //Garden Route - Nature Valley//
-       {lat: -33.9482, lng: 23.1573}, //Garden Route - Diepwalle//
-       {lat: -33.9897, lng: 22.6085}, //Garden Route - Ebb & Flow//
-       {lat: -34.8307, lng: 20.1235}, //L'Agulhas National Park//
+       {lat: -33.4825, lng: 25.7561}, //Addo Elephant National Park//
+       {lat: -33.8424, lng: 23.4528}, //Garden Route National Park//
+       {lat: -34.8269, lng: 20.0071}, //L'Agulhas National Park//
     
        
       
@@ -62,48 +58,24 @@ function initMap() {
                    zoom: 10
                 });
                break;
-               case 'spek':
+               case 'addo':
                 map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: -33.2440, lng: 25.2975}, //Addo National Park - Spekboom//
+                    center: {lat: -33.4825, lng: 25.7561}, //Addo Elephant National Park//
                     zoom: 10
                 });
                 break;
-           case 'nyathi':
-               map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: -33.3845, lng: 25.7937}, //Addo National Park - Nyathi//
-                   zoom: 10
-               });
-               break;
-          case 'storms':
-               map = new google.maps.Map(document.getElementById('map'), {
-                   center: {lat: -34.0222, lng: 23.8962}, //Garden Route - Storms River//
-                   zoom: 10
-                });
-               break;
-               case 'valley':
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: -33.9695, lng: 23.5621}, //Garden Route - Nature Valley//
-                    zoom: 10
-                 });
-                break;
-                case 'diep':
-                 map = new google.maps.Map(document.getElementById('map'), {
-                     center: {lat: -33.9482, lng: 23.1573}, //Garden Route - Diepwalle//
-                     zoom: 10
-                 });
-                 break;
-            case 'ebb':
-                map = new google.maps.Map(document.getElementById('map'), {
-                     center: {lat: -33.9897, lng: 22.6085}, //Garden Route - Ebb & Flow//
-                    zoom: 10
-                });
-                break;
-           case 'laghlas':
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: -34.8307, lng: 20.1235}, //L'Agulhas National Park//
-                    zoom: 10
-                 });
-                break;
+                case 'garden':
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: -33.8424, lng: 23.4528}, //Garden Route National Park//
+                        zoom: 10
+                    });
+                    break;
+                case 'laghlas':
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: -34.8269, lng: 20.0071}, //L'Agulhas National Park//
+                        zoom: 10
+                     });
+                    break;
             default:
         }
     }
