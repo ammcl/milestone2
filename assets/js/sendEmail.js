@@ -16,5 +16,5 @@ myform.submit(function(event){
        myform.find("button").text("Send");
     });
   return false;
-  document.getElementById("myForm").reset();
 });
+ document.getElementById("myForm").reset();
