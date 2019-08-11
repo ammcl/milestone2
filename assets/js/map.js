@@ -72,7 +72,7 @@ function initMap() {
                 case 'laghlas':
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: {lat: -34.8269, lng: 20.0071}, //L'Agulhas National Park//
-                        zoom: 3
+                        zoom: 11
                      });
                     break;
             default:
