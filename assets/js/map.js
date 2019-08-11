@@ -8,7 +8,7 @@ function initMap() {
     // Create an array of alphabetical characters used to label the markers.
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     
-    // Add some markers to the map.
+    // Add some markers to the main map.
     // Note: The code uses the JavaScript Array.prototype.map() method to
     // create an array of markers based on a given "locations" array.
     // The map() method here has nothing to do with the Google Maps API.
@@ -21,7 +21,7 @@ function initMap() {
     
     
     
-    // Add a marker clusterer to manage the markers.
+    // Add a marker clusterer to manage the markers on the main south african map.
     var markerCluster = new MarkerClusterer(map, markers,
     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
     }
@@ -37,7 +37,7 @@ function initMap() {
       
     ]
     
-    function moveMap() {
+    function moveMap() { //This will change map when the relevant one is choosen from the drop down list.//
        switch (document.getElementById("areaSelect").value) {
           case 'table':
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -50,7 +50,6 @@ function initMap() {
                     center: {lat: -32.2667, lng: 24.4929}, //Camdeboo National Park Valley of Desolation//
                    zoom: 10
                });
-               
                break;
           case 'mount':
                map = new google.maps.Map(document.getElementById('map'), {
@@ -73,7 +72,7 @@ function initMap() {
                 case 'laghlas':
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: {lat: -34.8269, lng: 20.0071}, //L'Agulhas National Park//
-                        zoom: 10
+                        zoom: 3
                      });
                     break;
             default:

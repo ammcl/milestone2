@@ -40,7 +40,7 @@
     })();
     </script>
 </head>
-    <!--Mask Layer-->
+    <!--Mask Layer for main photo-->
     <div id="intro" class="view">
         <div class="mask rgba-black-strong">
             <div class="container-fluid d-flex align-items-center justify-content-center h-100">
@@ -60,10 +60,11 @@
         </div>
     </div>
     <!--End of Mask Layer-->
-    <!--Main Navigation-->
+    <!--Eand of Navigation Bar Section-->
+    <!--Main Website Navigation-->
 <body class="mt-5">
         <div class="container">
-            <!--Section: Suggested Tours-->
+            <!--Section: Suggested Tours Tag-->
             <section id="suggested-tours" class="text-center">
                 <h2 class="mt-5 mb-5 font-weight-bold">Suggested Tours</h2>
                 <!--Grid row-->
@@ -106,13 +107,15 @@
                                 cable car ride back down again. Which gives you a 360<span>&#176;</span> view of Cape
                                 Town</p>
                         </div>
-                    <!--Grid column-->
+                    <!--End of Grid column-->
                     </div>
-                </div>    
+                </div> 
+                <!--End of Grid row-->   
             </section>
-            <!--Section: National Parks-->
+            <!--Section: End of Suggested Tours Tag-->
+            <!--Section: National Parks Tag-->
             <section id="nationalparks" class="text-center">
-                <!-- Heading -->
+                <!-- Section Heading -->
                 <h2 class="mt-5 mb-5 font-weight-bold">National Parks</h2>
                 <!--Grid row-->
                 <div class="row">
@@ -126,7 +129,7 @@
                         <p> Did you know that not all Zebras have the same pattern of stripes :-).</p>
                             <p><a href="https://www.sanparks.org/parks/mountain_zebra/" target="_blank">Mount Zebra National Park</a></p>
                     </div>
-                    <!--End of Grid column-->
+                    <!--End of Grid column for Mount Zebra-->
                     <!--Grid column for Addo-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="addo view overlay z-depth-1-half img-fluid" alt="">
@@ -137,7 +140,7 @@
                         <p>Where size doesn't matter, you have to stop even for a Dung Beetle!</p>
                         <p><a href="https://www.sanparks.org/parks/addo/" target="_blank" >Addo Elepant National Park</a></p>
                     </div>
-                    <!--End of Grid column-->
+                    <!--End of Grid column for Addo-->
                     <!--Grid column for Camdeboo-->
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="camdeboo view overlay z-depth-1-half img-fluid" alt="">
@@ -147,14 +150,17 @@
                         <p class="grey-text">Formed hundreds of millions of years ago, the Karoo of South Africa is one of the great natural wonders of the world. Camdeboo National Park provides the visitor with insights into the unique landscape and ecosystem of the Karoo, not to mention awesome scenic beauty</p>
                         <p><a href="https://www.sanparks.org/parks/camdeboo/" target="_blank">The Valley of Desolation</a></p>
                     </div>
-                    <!--End of Grid column-->
+                    <!--End of Grid column Camdeboo-->
                 </div>
                 <!--End of Grid row-->
-            </section>       
-        <!--Section: South Africa Map-->
+            </section> 
+            <!--Section: End of National Parks Tag-->     
+        <!--Section: South Africa Map (Maps) Tag-->
         <section id="roadtrip" class="text-center">
+            <!-- Section Heading Maps -->
             <h2 class="mt-5 mb-5 font-weight-bold">Maps of South Africa</h2>
-                <div class="container-fluid mb-4"> 
+                <div class="container-fluid mb-4">
+                   <!-- Drop Down List of Maps in SA that changes when selected --> 
                  <select id="areaSelect" onchange="moveMap()">
                         <option value="">Please Pick From The List below</option>
                         <option value="table">Table Mountain, Cape Town</option>
@@ -165,17 +171,17 @@
                         <option value="laghlas">L'Agulhas National Park</option>
                  </select>
                </div>  
-              <!--Google map-->
+              <!--Google Maps Reference-->
                          <div id="map" mb-5 col-lg-5 col-md-12 mx-auto></div>
         </section>
-
-        <!--Section:Carousel Gallery-->
+        <!-- Section: End South Africa Map (Maps) Tag-->
+        <!--Section:Photo Gallery & Story-->
         <section id="gallery" class="text-center">
          <h2 class="mt-5 mb-5 font-weight-bold">Photo Gallery</h2>
            <div class="container">
                 <div class="row col-lg-5 col-md-12 mx-auto">
                             <div id="saphotoscarousel" class="carousel slide" data-ride="carousel">
-                                <!--indicators dot nav-->
+                                <!--indicators dot navigation of photos-->
                                 <ol class="carousel-indicators">
                                     <li data-target="#saphotoscarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#saphotoscarousel" data-slide-to="1"></li>
@@ -184,7 +190,7 @@
                                     <li data-target="#saphotoscarousel" data-slide-to="4"></li>
                                     <li data-target="#saphotoscarousel" data-slide-to="5"></li>
                                 </ol>
-                                <!--wrapper for slides-->
+                                <!--wrapper for photo gallery-->
                                 <div class="carousel-inner" role="listbox">
                                     <div class="carousel-item active">
                                         <img class="d-block img-fluid" src="assets/images/capetown.jpg" alt="image" />
@@ -223,7 +229,7 @@
                                         </div>
                                     </div>    
                                 </div>
-                                <!--Carousel Controller Buttons-->
+                                <!--Carousel Controller Buttons next & previous actions-->
                                 <a class="carousel-control-prev" href="#saphotoscarousel" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
@@ -245,7 +251,7 @@
                 beautiful part of it all was seeing he elephants at Addo Elephant Park.  It was like stepping out of our world into theirs.</p>
                 <p>by <a><strong>Sarah-Leah Pimentel</strong></a>, 18/07/2018</p>
         </section>
-        <!--Section: Gallery End-->
+        <!--Section: End of Photo Gallery & Story-->
     <!--Section: Contact Form-->
     <section id="contact">
         <!-- Section Heading -->
@@ -283,6 +289,7 @@
    <!--Java Scripts End-->
    <!-- Footer Section -->
     <footer>
+        <!--Scroll Button back to the top of the website smoothly-->
         <div class="container">
             <button class="btn btn-default btn-lg pull-xs-right"></button>
             <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -311,10 +318,10 @@
                 </h5>Designed by Ann Marie McLaughlin, All Photography copyright remains with the designer.</h5>
             </div>
         </div>
- 
-            <!-- Copyright -->
+            <!--Scroll Button back to the top of the website smoothly-->
+            <!-- Copyright Section-->
             <div class="footer-copyright text-center py-3">© 2019 Copyright: Ann Marie McLaughlin</div>
-            <!-- Copyright -->
+            <!-- End of Copyright Section -->
     
         </footer>
     <!-- End of Footer Section-->
